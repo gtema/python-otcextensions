@@ -10,11 +10,13 @@ Open Telekom Cloud Resources
    Anti DDoS Service (Anti-DDoS) <anti_ddos/index>
    AutoScaling Service (AS) <auto_scaling/index>
    Cloud Container Engine (CCE) <cce/index>
+   Cloud Eye Service (CES) <ces/index>
    Cloud Trace Service (CTS) <cts/index>
    Distributed Cache Service (DCS) <dcs/index>
    Dedicated Host Service (DeH) <deh/index>
    Distributed Message Service (DMS) <dms/index>
    Domain Name Service (DNS) <dns/index>
+   Identity Service (IAM) <identity/index>
    Key Management Service (KMS) <kms/index>
    Network Address Translation (NAT) <nat/index>
    Object Block Storage (OBS) <obs/index>

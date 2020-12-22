@@ -20,6 +20,7 @@ from otcextensions.sdk.compute.v2 import server
 from otcextensions.common import exc
 
 from otcextensions.sdk.cloud import rds as _rds
+from otcextensions.sdk.cloud import cce as _cce
 
 
 _logger = _log.setup_logging('openstack')
@@ -61,6 +62,12 @@ OTC_SERVICES = {
         'service_type': 'ces',
         'append_project_id': True,
     },
+    # 'ces': {
+    #    'service_type': 'ces',
+    #    'endpoint_service_type': 'cesv1',
+    #    'set_endpoint_override': True
+    #    'append_project_id': False,
+    # },
     'cts': {
         'service_type': 'cts',
     },
@@ -100,6 +107,14 @@ OTC_SERVICES = {
     },
     'ecs': {
         'service_type': 'ecs',
+    },
+    'elb': {
+        'service_type': 'elb',
+        'replace_system': True
+    },
+    'identity': {
+        'service_type': 'identity',
+        'replace_system': True
     },
     'kms': {
         'service_type': 'kms',
@@ -318,6 +333,7 @@ def load(conn, **kwargs):
     patch_openstack_resources()
 
     extend_instance(conn, _rds.RdsMixin)
+    extend_instance(conn, _cce.CceMixin)
 
     return None
 
